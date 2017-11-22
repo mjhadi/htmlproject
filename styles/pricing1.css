@@ -1,0 +1,36 @@
+﻿table {
+    background-color:Navajowhite;;
+    border-collapse: collapse;
+    border: 1px solid #FEF5E7;
+}
+td {
+    border: 1px solid #FEF5E7;
+}
+th {
+   text-align: center;
+   border: 1px solid #FEF5E7;
+}
+#homepage p {
+    font-size:20px;
+}
+#homepage h1 {
+    text-align:left;
+    color:grey;
+}
+td img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:35px;
+    height:35px;
+}
+tr.d0 td {
+  background-color: Navajowhite;
+  color: black;
+}
+tr.d1 td {
+  background-color: white;
+  color: black;
+}
+
+

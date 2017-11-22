@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Product Order Form 1</title>
+    <link type="text/css" rel="stylesheet" href="styles/gpsware.css">
+    <script type="text/javascript" src="calendar.js"></script>
+    <script type="text/javascript">
+     
+
+        // add event listener method to call the startForm function
+        window.addEventListener("load", startForm, false);
+
+    </script>
+</head>
+
+<body>
+    <form name="form1" id="form1" method="post" action="form2.html" onreset="location.reload()" onsubmit ="return validateForm()";>
+
+            <div id="main">
+            <h1>Pricing Form</h1>
+            <p id="datep">
+                <input class="text" id="txtToday" name="txtToday" size="11" value="mm-dd-yyyy" readonly="readonly" />
+            </p>
+            <fieldset>
+                <legend>Select a Product</legend>
+
+                <table>
+                    <tr>
+                        <td class="labelcell">Product</td>
+                        <td class="inputcell">
+                            <select name="prod" id="prod" onchange="calculatePrice();">
+                                <option value="0">Products </option>
+                                <option value="1">Web Design and Development</option>
+                                <option value="2">Mobile Applications</option>
+                            </select>
+
+                            <select name="qty" id="qty" onchange="calculatePrice();">
+                                <option value="0">Types</option>
+                                <option value="1500">Standard</option>
+                                <option value="3000">Business</option>
+                                <option value="4500">E-Commerce</option>
+                            </select>
+                            <select name="qty" id="qty" onchange="calculatePrice();">
+                                <option value="0">Types</option>
+                                <option value="1500">Android</option>
+                                <option value="3000">ios</option>
+                            </select>
+                        </td>
+                        <td class="outcell">
+                            <input class="num" name="txtPrice" id="txtPrice" size="7" value="0.00" readonly="readonly" />
+                        </td>
+                    </tr>
+
+                    <!--<tr>
+                        <td class="labelcell">Shipping</td>
+                        <td>
+                            <p>
+                                <input type="radio" name="shipType" id="ship1" value="4.95" onclick="calculateShipping(this)"/>
+                                <label for="ship1">Standard (4-6 business days): $4.95</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="shipType" id="ship2" value="8.95" onclick="calculateShipping(this)" />
+                                <label for="ship2">Express (2 days): $8.95</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="shipType" id="ship3" value="12.95" onclick="calculateShipping(this)" />
+                                <label for="ship3">Next Day (1 day): $12.95</label>
+                            </p>
+                        </td>
+                        <td class="outcell">
+                            <input class="num" name="txtShip" id="txtShip" size="7" value="0.00" readonly="readonly" />
+                        </td>
+                    </tr> --> 
+
+                    <tr>
+                        <td colspan="2" class="labelcell2">Subtotal</td>
+                        <td class="outcell">
+                            <input class="num" name="txtSubtotal" id="txtSubtotal"  size="7" value="0.00" readonly="readonly" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="labelcell2">Tax (15%)</td>
+                        <td class="outcell">
+                            <input class="num" name="txtTax" id="txtTax" size="7" value="0.00" readonly="readonly" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="labelcell2">TOTAL</td>
+                        <td class="outcell">
+                            <input class="num" name="txtTotal" id="txtTotal" size="7" value="0.00" readonly="readonly" />
+                        </td>
+                    </tr>
+                </table>
+
+            </fieldset>
+
+            
+        </div>
+        <div class="cont_details">
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label for='name'>Name</label>
+                <input type="text" id="name" name='name' />
+                <br />
+                <label for='address'>Address</label>
+                <input type="text" id="address" name='address' />
+                <br />
+                <label for='phonenumber'>Phone Number</label>
+                <input type="text" id="phonenumber" name='phonenumber' />
+                <br />
+            </fieldset>
+        </div>
+        <p id="formbuttons">
+            <input type="reset" name="btnCancel" id="btnCancel" value="Cancel" />
+            <input type="submit" name="submit" id="submit" onclick="calculateTotal()"  />
+        </p>
+       
+
+    </form>
+</body>
+</html>
